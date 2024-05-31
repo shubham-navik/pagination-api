@@ -104,6 +104,206 @@ const posts = [
         "id": 10,
         "imgUrl": "https://source.unsplash.com/random/800x600/?festival,culture"
     },
+    {
+        "title": "New Post 11",
+        "author": "Liam Wilson",
+        "date": "2024-06-11",
+        "category": "Science",
+        "tags": ["research", "discovery", "innovation"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 11,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?science"
+    },
+    {
+        "title": "New Post 12",
+        "author": "Ava Brown",
+        "date": "2024-06-12",
+        "category": "Music",
+        "tags": ["songs", "melody", "concerts"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 12,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?music"
+    },
+    {
+        "title": "New Post 3",
+        "author": "Mark Johnson",
+        "date": "2024-06-03",
+        "category": "Sports",
+        "tags": ["fitness", "exercise", "training"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 13,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?sports"
+    },
+    {
+        "title": "New Post 4",
+        "author": "Sarah Brown",
+        "date": "2024-06-04",
+        "category": "Travel",
+        "tags": ["adventure", "explore", "destination"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 14,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?travel"
+    },
+    {
+        "title": "New Post 5",
+        "author": "Michael Clark",
+        "date": "2024-06-05",
+        "category": "Technology",
+        "tags": ["programming", "coding", "software"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 15,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?technology"
+    },
+    {
+        "title": "New Post 6",
+        "author": "Emma Wilson",
+        "date": "2024-06-06",
+        "category": "Nature",
+        "tags": ["environment", "wildlife", "conservation"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 16,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?nature"
+    },
+    {
+        "title": "New Post 7",
+        "author": "Ryan Thompson",
+        "date": "2024-06-07",
+        "category": "Food",
+        "tags": ["recipes", "cooking", "nutrition"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 17,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?food"
+    },
+    {
+        "title": "New Post 8",
+        "author": "Olivia Moore",
+        "date": "2024-06-08",
+        "category": "Fashion",
+        "tags": ["style", "trends", "clothing"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 18,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?fashion"
+    },
+    {
+        "title": "New Post 9",
+        "author": "David Walker",
+        "date": "2024-06-09",
+        "category": "Health",
+        "tags": ["wellness", "fitness", "mental health"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 19,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?health"
+    },
+    {
+        "title": "New Post 10",
+        "author": "Sophia Hall",
+        "date": "2024-06-10",
+        "category": "Art",
+        "tags": ["creativity", "painting", "sculpture"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 20,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?art"
+    },
+    {
+        "title": "New Post 11",
+        "author": "Liam Wilson",
+        "date": "2024-06-11",
+        "category": "Science",
+        "tags": ["research", "discovery", "innovation"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 21,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?science"
+    },
+    {
+        "title": "New Post 12",
+        "author": "Ava Brown",
+        "date": "2024-06-12",
+        "category": "Music",
+        "tags": ["songs", "melody", "concerts"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 22,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?music"
+    },
+    {
+        "title": "New Post 13",
+        "author": "Noah Moore",
+        "date": "2024-06-13",
+        "category": "Education",
+        "tags": ["learning", "school", "knowledge"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 23,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?education"
+    },
+    {
+        "title": "New Post 14",
+        "author": "Isabella Clark",
+        "date": "2024-06-14",
+        "category": "History",
+        "tags": ["past", "heritage", "culture"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 24,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?history"
+    },
+    {
+        "title": "New Post 15",
+        "author": "Mia Hall",
+        "date": "2024-06-15",
+        "category": "Technology",
+        "tags": ["innovation", "digital", "future"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 25,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?technology"
+    },
+    {
+        "title": "New Post 16",
+        "author": "James Wilson",
+        "date": "2024-06-16",
+        "category": "Travel",
+        "tags": ["adventure", "explore", "destination"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 26,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?travel"
+    },
+    {
+        "title": "New Post 17",
+        "author": "Charlotte Taylor",
+        "date": "2024-06-17",
+        "category": "Food",
+        "tags": ["recipes", "cooking", "nutrition"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 27,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?food"
+    },
+    {
+        "title": "New Post 18",
+        "author": "Ethan Lewis",
+        "date": "2024-06-18",
+        "category": "Fashion",
+        "tags": ["style", "trends", "clothing"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 28,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?fashion"
+    },
+    {
+        "title": "New Post 19",
+        "author": "Aria Garcia",
+        "date": "2024-06-19",
+        "category": "Health",
+        "tags": ["wellness", "fitness", "mental health"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 29,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?health"
+    },
+    {
+        "title": "New Post 20",
+        "author": "Lucas Hernandez",
+        "date": "2024-06-20",
+        "category": "Art",
+        "tags": ["creativity", "painting", "sculpture"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "id": 30,
+        "imgUrl": "https://source.unsplash.com/random/800x600/?art"
+    }
     // Add more posts here to reach a total of 30
 ];
 
