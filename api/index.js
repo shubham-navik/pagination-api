@@ -310,10 +310,17 @@ const posts = [
 // Route to get paginated posts
 app.get('/data', (req, res) => {
     const page = parseInt(req.query.page) || 1;
-    const pageSize = parseInt(req.query.pageSize) || 5;
+    const pageSize = 5; // Fixed page size
 
     const totalPosts = posts.length;
     const totalPages = Math.ceil(totalPosts / pageSize);
+
+    // Ensure the page number is within valid range
+    if (page < 1 || page > totalPages) {
+        return res.status(400).json({
+            error: "Invalid page number"
+        });
+    }
 
     const startIndex = (page - 1) * pageSize;
     const endIndex = page * pageSize;
