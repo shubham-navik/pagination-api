@@ -2,81 +2,131 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Example data
+// Example data with 30 posts divided into 6 pages
 const data = [
+    // Page 1
     {
-        title: "Post Title 1",
-        author: "Author 1",
+        title: "Exploring the Beauty of Nature",
+        author: "Alice Green",
         date: "2024-05-31",
-        category: "Category 1",
-        tags: ["a", "b", "c", "d"],
-        content: "Content of post 1.",
+        category: "Travel",
+        tags: ["jobs", "continuous learning", "professional development", "skills", "networking"],
+        content: "Discovering the beauty of nature helps us reconnect with our surroundings and find peace in the wilderness.",
         id: 1,
         imgUrl: "https://source.unsplash.com/random/800x600/?nature,water"
     },
     {
-        title: "Post Title 2",
-        author: "Author 2",
+        title: "City Lights and Night Adventures",
+        author: "Bob Smith",
         date: "2024-05-30",
-        category: "Category 2",
-        tags: ["a", "b", "c", "d"],
-        content: "Content of post 2.",
+        category: "Urban",
+        tags: ["jobs", "continuous learning", "professional development", "skills", "networking"],
+        content: "The city never sleeps and offers endless opportunities for adventure, culture, and vibrant nightlife.",
         id: 2,
         imgUrl: "https://source.unsplash.com/random/800x600/?city,night"
     },
     {
-        title: "Post Title 3",
-        author: "Author 3",
+        title: "Forests: The Lungs of Our Planet",
+        author: "Cathy Brown",
         date: "2024-05-29",
-        category: "Category 3",
-        tags: ["a", "b", "c", "d"],
-        content: "Content of post 3.",
+        category: "Environment",
+        tags: ["jobs", "continuous learning", "professional development", "skills", "networking"],
+        content: "Forests play a crucial role in maintaining ecological balance and providing a habitat for countless species.",
         id: 3,
         imgUrl: "https://source.unsplash.com/random/800x600/?forest,trees"
     },
     {
-        title: "Post Title 4",
-        author: "Author 4",
+        title: "Mountain Peaks and Snowy Trails",
+        author: "Daniel White",
         date: "2024-05-28",
-        category: "Category 4",
-        tags: ["a", "b", "c", "d"],
-        content: "Content of post 4.",
+        category: "Adventure",
+        tags: ["jobs", "continuous learning", "professional development", "skills", "networking"],
+        content: "Mountain adventures offer thrilling experiences and breathtaking views from snowy peaks.",
         id: 4,
         imgUrl: "https://source.unsplash.com/random/800x600/?mountains,snow"
     },
     {
-        title: "Post Title 5",
-        author: "Author 5",
+        title: "Sunset at the Beach",
+        author: "Emily Johnson",
         date: "2024-05-27",
-        category: "Category 5",
-        tags: ["a", "b", "c", "d"],
-        content: "Content of post 5.",
+        category: "Relaxation",
+        tags: ["jobs", "continuous learning", "professional development", "skills", "networking"],
+        content: "Watching the sunset at the beach is a serene experience that calms the mind and soul.",
         id: 5,
         imgUrl: "https://source.unsplash.com/random/800x600/?beach,sunset"
+    },
+    // Page 2
+    {
+        title: "Ancient Ruins and Modern Discoveries",
+        author: "Frank Harris",
+        date: "2024-05-26",
+        category: "History",
+        tags: ["jobs", "continuous learning", "professional development", "skills", "networking"],
+        content: "Exploring ancient ruins gives us a glimpse into the past and helps us understand human history.",
+        id: 6,
+        imgUrl: "https://source.unsplash.com/random/800x600/?ancient,ruins"
+    },
+    {
+        title: "Desert Adventures and Sand Dunes",
+        author: "Grace Lewis",
+        date: "2024-05-25",
+        category: "Adventure",
+        tags: ["jobs", "continuous learning", "professional development", "skills", "networking"],
+        content: "Deserts offer unique adventures with their vast sand dunes and stunning landscapes.",
+        id: 7,
+        imgUrl: "https://source.unsplash.com/random/800x600/?desert,sand"
+    },
+    {
+        title: "Snowboarding in the Alps",
+        author: "Henry Clark",
+        date: "2024-05-24",
+        category: "Sports",
+        tags: ["jobs", "continuous learning", "professional development", "skills", "networking"],
+        content: "Snowboarding in the Alps is an exhilarating experience with challenging slopes and beautiful scenery.",
+        id: 8,
+        imgUrl: "https://source.unsplash.com/random/800x600/?snowboarding,alps"
+    },
+    {
+        title: "Exploring Tropical Rainforests",
+        author: "Isla Martin",
+        date: "2024-05-23",
+        category: "Nature",
+        tags: ["jobs", "continuous learning", "professional development", "skills", "networking"],
+        content: "Tropical rainforests are rich in biodiversity and offer a unique experience of nature's wonders.",
+        id: 9,
+        imgUrl: "https://source.unsplash.com/random/800x600/?rainforest,tropical"
+    },
+    {
+        title: "Cultural Festivals Around the World",
+        author: "Jack Lee",
+        date: "2024-05-22",
+        category: "Culture",
+        tags: ["jobs", "continuous learning", "professional development", "skills", "networking"],
+        content: "Cultural festivals around the world showcase the diversity and richness of different traditions and customs.",
+        id: 10,
+        imgUrl: "https://source.unsplash.com/random/800x600/?festival,culture"
     }
-    // Add more posts as needed
 ];
 
-app.get('/data', (req, res) => {
+// Route to get paginated posts
+app.get('/posts', (req, res) => {
     const page = parseInt(req.query.page) || 1;
     const pageSize = parseInt(req.query.pageSize) || 5;
-    const start = (page - 1) * pageSize;
-    const end = start + pageSize;
-    const paginatedPosts = data.slice(start, end);
 
-    const paginatedData = {
+    const startIndex = (page - 1) * pageSize;
+    const endIndex = page * pageSize;
+
+    const paginatedPosts = data.slice(startIndex, endIndex);
+
+    res.json({
         page,
         pageSize,
         totalPosts: data.length,
         totalPages: Math.ceil(data.length / pageSize),
         posts: paginatedPosts
-    };
-
-    res.json(paginatedData);
+    });
 });
 
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+    console.log(`Server running at http://localhost:${port}`);
 });
-
-module.exports = app;
